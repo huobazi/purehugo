@@ -19,7 +19,7 @@
                             {{ end }}
                             {{ if isset .Params "tags" }}
                                 {{ range .Params.tags }}
-                                    <a class="post-category post-category-{{ . }}" href='{{ ( printf "tags/%s" . ) | urlize }}'>{{ . }}</a>
+                                    <a class="post-category post-category-{{ . }}" href='{{ ( printf "/tags/%s" . ) | urlize }}'>{{ . }}</a>
                                 {{ end }}
                             {{ end }}
                         </p>
