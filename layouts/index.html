@@ -18,9 +18,9 @@
                             {{ with .Params.author }}
                                 By <strong class="post-author">{{ . }}</strong>
                             {{ end }}
-                            {{ if isset .Params "tags" }}
-                                {{ $baseUrl := .Site.BaseUrl }}
-                                {{ range .Params.tags}}<a class="post-category post-category-{{ . }}" href="{{ $baseUrl }}/tags/{{ . | urlize }}">{{ . }}</a>{{ end }}
+                            {{ if isset .Params "categories" }}
+                                under 
+                                {{ range .Params.categories }}<a class="post-category post-category-{{ . }}" href='{{ ( printf "categories/%s" . ) | absURL }}'>{{ . }}</a>{{ end }}
                             {{ end }}
                         </p>
                     </header>
