@@ -19,7 +19,7 @@
                                 By <strong class="post-author">{{ . }}</strong>
                             {{ end }}
                             {{ if isset .Params "tags" }}
-                                {{ range .Params.tags }}<a class="post-category post-category-{{ . }}" href='{{ ( printf "tags/%s" . ) | absURL }}'>{{ . }}</a>{{ end }}
+                                {{ range .Params.tags }}<a class="post-category post-category-{{ . }}" href='{{ ( printf "tags/%s" . ) | urlize }}'>{{ . }}</a>{{ end }}
                             {{ end }}
                         </p>
                     </header>
