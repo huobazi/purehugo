@@ -18,9 +18,9 @@
                             {{ with .Params.author }}
                                 By <strong class="post-author">{{ . }}</strong>
                             {{ end }}
-                            {{ if isset .Params "categories" }}
-                                {{ range .Params.categories }}
-                                    <a class="post-category post-category-{{ . }}" href='{{ ( printf "categories/%s" . ) | absURL }}'>{{ . }}</a>
+                            {{ if isset .Params "tags" }}
+                                {{ range .Params.tags }}
+                                    <a class="post-category post-category-{{ . }}" href='{{ ( printf "tags/%s" . ) | absURL }}'>{{ . }}</a>
                                 {{ end }}
                             {{ end }}
                         </p>
